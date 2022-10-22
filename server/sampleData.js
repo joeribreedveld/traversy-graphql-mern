@@ -76,4 +76,5 @@ const clients = [
   },
 ];
 
+// Export the data arrays
 module.exports = { projects, clients };

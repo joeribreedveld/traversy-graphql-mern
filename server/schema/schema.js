@@ -1,5 +1,4 @@
-const Project = require("../models/Project");
-const Client = require("../models/Client");
+const { Project, Client } = require("../models/Project");
 
 const {
   GraphQLObjectType,
@@ -38,6 +37,7 @@ const ClientType = new GraphQLObjectType({
   }),
 });
 
+// Root Query
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
@@ -91,6 +91,7 @@ const mutation = new GraphQLObjectType({
         return client.save();
       },
     },
+
     deleteClient: {
       type: ProjectType,
       args: {

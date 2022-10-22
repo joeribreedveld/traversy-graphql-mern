@@ -6,11 +6,13 @@ const port = process.env.PORT || 5000;
 const connectDB = require("./config/db");
 const schema = require("./schema/schema");
 
+// Define the Express app
 const app = express();
 
 // Connect to database
 connectDB();
 
+// Middleware
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -19,4 +21,5 @@ app.use(
   })
 );
 
+// Start the server
 app.listen(port, console.log(`Server running on port ${port}`));

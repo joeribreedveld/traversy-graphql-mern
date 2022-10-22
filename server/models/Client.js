@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Create Schema
 const ClientSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -12,4 +13,5 @@ const ClientSchema = new mongoose.Schema({
   },
 });
 
+// Create Model from Schema and export it
 module.exports = mongoose.model("Client", ClientSchema);
